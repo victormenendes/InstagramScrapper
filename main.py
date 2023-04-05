@@ -13,5 +13,6 @@ if not os.path.exists(username):
     os.mkdir(username)
 
 # Faz o download das fotos do perfil
+
 for post in instaloader.Profile.from_username(L.context, username).get_posts():
     L.download_post(post, target=f"{username}")
